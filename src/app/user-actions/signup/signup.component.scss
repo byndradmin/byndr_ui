@@ -1,0 +1,23 @@
+@import '/src/assets/css/variables';
+
+.accept-checkbox {
+    .mat-checkbox {
+        display: flex;
+        justify-content: center;
+    }
+}
+button.btn-submit {
+    padding: 8px 50px;
+    margin: 0px auto;
+    display: table;
+    margin-top: 30px;
+}
+.login-instead a {
+    font-family: Metropolis-Medium;
+    font-size: $font-15;
+    line-height: $font-18;
+    border-bottom: 1px solid;
+    &:hover {
+        text-decoration: none;
+    }
+}

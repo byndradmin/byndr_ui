@@ -1,0 +1,41 @@
+@import '/src/assets/css/variables';
+
+.box-main {
+    .byndr-logo {
+        padding: 10px 40px 20px 40px;
+    }
+    .popup-link {
+        color: $color-blue1;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .popup-small-text {
+        text-align: center;
+        font-size: $font-16;
+        line-height: $font-24;
+        color: $color-black2;
+        .count {
+            color: $color-blue1;
+        }
+    }
+    .popup-info-text {
+        font-size: $font-18;
+        text-align: center;
+        line-height: $font-24;
+        color: $color-black2;
+    }
+    .resent-confirmation-text {
+        font-size: $font-18;
+        text-align: center;
+        line-height: $font-24;
+        color: $color-blue1;
+    }
+}
+button.btn-resend {
+    padding: 8px 20px;
+    width: 100%;
+}
+button.btn-cancel {
+    padding: 8px 20px;
+    width: 100%;
+}

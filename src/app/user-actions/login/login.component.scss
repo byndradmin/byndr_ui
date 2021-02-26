@@ -1,0 +1,23 @@
+@import '/src/assets/css/variables';
+
+button.btn-submit {
+    padding: 8px 50px;
+    margin: 0px auto;
+    display: table;
+    margin-top: 30px;
+}
+.forgot-password-text a {
+    font-family: Metropolis-Medium;
+    font-size: $font-14;
+    line-height: $font-22;
+    color: $color-blue2;
+}
+.signup-instead a {
+    font-size: $font-14;
+    line-height: $font-18;
+    color: $color-lightgrey9;
+    border-bottom: 1px solid $color-lightgrey9;
+    &:hover {
+        text-decoration: none;
+    }
+}

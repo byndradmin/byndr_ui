@@ -1,0 +1,259 @@
+@import './variables';
+
+// 0px margin for all header tags and paragraph
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0px;
+}
+ul { padding: 0px; }
+
+// adding fonts
+@font-face {
+    font-family: Metropolis-Medium;
+    src: url("../fonts/Metropolis-Medium.otf");
+}
+@font-face {
+    font-family: Metropolis-Regular;
+    src: url("../fonts/Metropolis-Regular.otf");
+}
+body, p, span, li, a, div, h5, h6, input, textarea, select {
+    font-family: Metropolis-Regular;
+}
+h1, h2, h3, h4 {
+    font-family: Metropolis-Medium;
+}
+
+// all components width to 100%
+app-signup, app-login, app-forgot-password, app-confirmation-link, app-reset-password, app-password-confirmation-link { width: 100%; }
+
+// global paddings
+.pt-10 { padding-top: 10px; }
+.pt-20 { padding-top: 20px; }
+.pr-20 { padding-right: 20px; }
+.pb-20 { padding-bottom: 20px; }
+.prb-20 { padding: 0px 20px 20px 0px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mr-20 { margin-right: 20px; }
+.mr-10 { margin-right: 10px; }
+.ml-10 { margin-left: 10px; }
+
+// font sizes for header tags
+.h1-40 {
+    font-size: $font-40;
+    line-height: $font-48;
+    font-family: Metropolis-Medium;
+    color: $color-blue3;
+}
+.h2-28 {
+    font-size: $font-28;
+    line-height: $font-36;
+    font-family: Metropolis-Medium;
+    color: $color-blue3;
+}
+
+// global styles
+.box-main {
+    background-color: $color-white;
+    box-shadow: 0px 0px 0.2px rgba(0,0,0,.8);
+    border-radius: 15px;
+}
+.box-padding-large {
+    padding: 40px 55px;
+}
+.w-100, .mat-form-field {
+    width: 100%;
+}
+// material angular global scss
+.mat-form-field-appearance-outline {
+    .mat-form-field-infix {
+        padding: 0.4em 12px 1em 12px;
+        input::placeholder {
+            font-size: $font-14;
+            color: $color-lightgrey5;
+            opacity: 1; /* Firefox */
+        }
+    }
+    .mat-form-field-prefix, .mat-form-field-suffix {
+        top: 0em !important;
+        font-size: 14px;
+    }
+    .mat-form-field-outline-thick .mat-form-field-outline-start, .mat-form-field-outline-thick .mat-form-field-outline-end,  .mat-form-field-outline-thick .mat-form-field-outline-gap {
+        border-width: 1px !important;
+    }
+    .mat-form-field-outline {
+        color: $color-lightgrey3;
+    }
+    &.mat-focused .mat-form-field-outline-thick, &.ng-valid .mat-form-field-outline {
+        color: $color-black;
+    }
+    &.password-field.ng-valid .mat-form-field-outline {
+        color: $color-green;
+    }
+} 
+.mat-form-field-suffix {
+    .required-text {
+        color: $color-red;
+    }
+}
+.password-icon {
+     .mat-icon {
+        position: relative;
+        top: 6px;
+        right: -6px;
+        color: $color-lightgrey2;
+    }
+    button:focus {
+        outline: none;
+    }
+}
+.mat-checkbox {
+    .mat-checkbox-layout {
+        margin-bottom: 0px;
+        .mat-checkbox-label {
+            color: $color-lightgrey9;
+            font-size: $font-13;
+        }
+    }
+    &.checkbox-error {
+        .mat-checkbox-label, .mat-checkbox-label a {
+            color: $color-red;
+        }
+        .mat-checkbox-frame {
+            border-color: $color-red;
+        }
+    }
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $color-blue1;
+}
+
+.mat-form-field-subscript-wrapper {
+    margin-top: 5px;
+    .mat-error {
+        position: relative;
+        left: -10px;
+        .exclamation-symbol {
+            width: 13px;
+            height: 13px;
+            color: $color-white;
+            background: $color-red;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 5px;
+            span {
+                position: relative;
+                left: 5px;
+                top: 1px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+mat-password-strength {
+    .mat-progress-bar {
+        height: 0px;
+    }
+}
+mat-password-strength-info {
+    .mat-card {
+        margin-top: -2px;
+        padding: 12px 20px;
+    }
+}
+.mat-icon.mat-primary {
+    color: $color-green;
+}
+
+mat-form-field .mat-form-field {
+    &-underline {
+        position: static;
+    }
+    &-subscript-wrapper {
+        position: static;
+    }
+}
+.mat-error {
+    color: $color-red;
+    background: $color-red-10;
+    padding: 8px 10px;
+    width: calc(100% + 25px);
+}
+.password-error {
+    display: flex;
+    flex-flow: row wrap;
+    .not-strong {
+        font-size: $font-14;
+        font-family: 'Metropolis-Medium';
+    }
+    .password-info {
+        padding-left: 18px;
+        padding-top: 5px;
+    }
+}
+.mat-form-field-wrapper {
+    padding-bottom: 15px;
+}
+
+// country flag country code scss
+.iti--allow-dropdown {
+    width: 100%;
+    margin-bottom: 20px;
+    input {
+        padding: 11px 20px 11px 65px !important;
+        border: 1px solid $color-lightgrey3;
+        border-radius: 5px;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    .iti__selected-flag {
+        padding: 0 12px 0 24px;
+    }
+}
+.search-container input {
+    padding-left: 22px !important;
+}
+
+//buttons global scss
+button {
+    box-shadow: none !important; 
+    &.btn-submit {
+        background-color: $color-blue1;
+        color: $color-white;
+        font-size: $font-18;
+        line-height: $font-28;
+        border: 1px solid $color-blue1;
+        span {
+            font-family: Metropolis-Medium;
+        }
+    }
+    &.btn-resend {
+        background-color: $color-blue1-05;
+        border: 1px solid $color-blue1-05;
+        color: $color-blue1;
+        font-size: $font-18;
+        line-height: $font-28;
+        span {
+            font-family: Metropolis-Medium;
+        }
+        &.resend-confirm, &:focus {
+            background-color: $color-blue1;
+            border: 1px solid $color-blue1;
+            color: $color-white;
+        }
+    }
+    &.btn-cancel {
+        background-color: $color-white;
+        border: 1px solid $color-lightgrey10;
+        color: $color-lightgrey10;
+        font-size: $font-18;
+        line-height: $font-28;
+        span {
+            font-family: Metropolis-Medium;
+        }
+        &:focus {
+            border: 2px solid $color-lightgrey10;
+        }
+    }
+}
