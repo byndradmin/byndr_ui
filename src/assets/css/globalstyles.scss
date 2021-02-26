@@ -38,15 +38,15 @@ app-signup, app-login, app-forgot-password, app-confirmation-link, app-reset-pas
 .ml-10 { margin-left: 10px; }
 
 // font sizes for header tags
-.h1-40 {
-    font-size: $font-40;
-    line-height: $font-48;
+.h1-36 {
+    font-size: $font-36;
+    line-height: $font-42;
     font-family: Metropolis-Medium;
     color: $color-blue3;
 }
-.h2-28 {
-    font-size: $font-28;
-    line-height: $font-36;
+.h2-26 {
+    font-size: $font-26;
+    line-height: $font-34;
     font-family: Metropolis-Medium;
     color: $color-blue3;
 }
@@ -58,7 +58,7 @@ app-signup, app-login, app-forgot-password, app-confirmation-link, app-reset-pas
     border-radius: 15px;
 }
 .box-padding-large {
-    padding: 40px 55px;
+    padding: 35px 50px;
 }
 .w-100, .mat-form-field {
     width: 100%;
@@ -66,7 +66,7 @@ app-signup, app-login, app-forgot-password, app-confirmation-link, app-reset-pas
 // material angular global scss
 .mat-form-field-appearance-outline {
     .mat-form-field-infix {
-        padding: 0.4em 12px 1em 12px;
+        padding: 4px 12px 12px 8px;
         input::placeholder {
             font-size: $font-14;
             color: $color-lightgrey5;
@@ -199,10 +199,12 @@ mat-form-field .mat-form-field {
     width: 100%;
     margin-bottom: 20px;
     input {
-        padding: 11px 20px 11px 65px !important;
+        padding: 12px 20px 8px 65px !important;
         border: 1px solid $color-lightgrey3;
         border-radius: 5px;
         width: 100%;
+        font-size: 15px;
+        color: $color-black;
         &:focus {
             outline: none;
         }
@@ -221,8 +223,8 @@ button {
     &.btn-submit {
         background-color: $color-blue1;
         color: $color-white;
-        font-size: $font-18;
-        line-height: $font-28;
+        font-size: $font-16;
+        line-height: $font-26;
         border: 1px solid $color-blue1;
         span {
             font-family: Metropolis-Medium;
@@ -232,8 +234,8 @@ button {
         background-color: $color-blue1-05;
         border: 1px solid $color-blue1-05;
         color: $color-blue1;
-        font-size: $font-18;
-        line-height: $font-28;
+        font-size: $font-16;
+        line-height: $font-26;
         span {
             font-family: Metropolis-Medium;
         }
@@ -247,8 +249,8 @@ button {
         background-color: $color-white;
         border: 1px solid $color-lightgrey10;
         color: $color-lightgrey10;
-        font-size: $font-18;
-        line-height: $font-28;
+        font-size: $font-16;
+        line-height: $font-26;
         span {
             font-family: Metropolis-Medium;
         }
