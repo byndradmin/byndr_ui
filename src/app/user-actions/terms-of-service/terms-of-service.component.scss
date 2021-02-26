@@ -1,0 +1,34 @@
+@import '/src/assets/css/variables';
+
+.terms-main {
+    height: 350px;
+    overflow-y: auto;
+    background: #fafafa;
+    padding: 15px 30px 15px 20px;
+    .terms-body {
+        color: $color-black-80;
+        font-size: 15px;
+        line-height: 24px;
+        b {
+            font-family: 'METROPOLIS-MEDIUM';
+        }
+    }
+}
+.terms-header {
+    h3 {
+        padding-bottom: 5px !important;
+        color: $color-blue1;
+    }
+    .last-updated-text {
+        color: $color-black-40;
+    }
+    .close-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+.accept-btn button {
+    padding: 6px 50px;
+    margin: 0px auto;
+    display: table;
+}

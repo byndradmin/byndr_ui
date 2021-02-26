@@ -15,9 +15,12 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatListModule } from '@angular/material/list';
 import { ConfirmationLinkComponent } from './confirmation-link/confirmation-link.component';
 import { PasswordConfirmationLinkComponent } from './password-confirmation-link/password-confirmation-link.component';
-
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { IntroComponent } from './intro/intro.component';
+import { AreasOfInterestComponent } from './areas-of-interest/areas-of-interest.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PasswordConfirmationLinkComponent } from './password-confirmation-link/
     ForgotPasswordComponent,
     ResetPasswordComponent,
     ConfirmationLinkComponent,
-    PasswordConfirmationLinkComponent
+    PasswordConfirmationLinkComponent,
+    TermsOfServiceComponent,
+    IntroComponent,
+    AreasOfInterestComponent
   ],
   imports: [
     UserActionsRoutingModule,
@@ -36,7 +42,8 @@ import { PasswordConfirmationLinkComponent } from './password-confirmation-link/
     NgxIntlTelInputModule,
     CommonModule,
     FormsModule, ReactiveFormsModule,
-    MatInputModule, MatFormFieldModule, MatCheckboxModule, MatButtonModule, MatSlideToggleModule
+    MatInputModule, MatFormFieldModule, MatCheckboxModule, MatButtonModule, MatSlideToggleModule,
+    MatListModule
   ],
   providers: [
     // {provide: MyErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}

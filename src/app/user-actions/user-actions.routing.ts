@@ -7,6 +7,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ConfirmationLinkComponent } from './confirmation-link/confirmation-link.component';
 import { PasswordConfirmationLinkComponent } from './password-confirmation-link/password-confirmation-link.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { IntroComponent } from './intro/intro.component';
+import { AreasOfInterestComponent } from './areas-of-interest/areas-of-interest.component';
 
 const useractionsRoutes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'signup' },
@@ -37,6 +40,18 @@ const useractionsRoutes: Routes = [
             {
                 path: 'password-confirmation-link',
                 component: PasswordConfirmationLinkComponent
+            },
+            {
+                path: 'terms-of-service',
+                component: TermsOfServiceComponent
+            },
+            {
+                path: 'intro',
+                component: IntroComponent
+            },
+            {
+                path: 'areas-of-interest',
+                component: AreasOfInterestComponent
             }
         ]
     }

@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="33.3333" fxFlex.xs="90" fxFlex.sm="70" fxFlex.md="50" fxLayoutAlign="center center">
+        <div class="box-main box-padding-large w-100" fxLayout="column">
+            <h3 class="h3-24 pb-10" fxLayoutAlign="center center">Hey there!</h3>
+            <h5 class="h5-18 pb-10" fxLayoutAlign="center center">What should we call you?</h5>
+            <form>
+                <div class="form-fields-main mt-20">
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="First Name">
+                        <span matSuffix class="required-text">* Required</span>
+                        <mat-error>
+                            <div class="password-error">
+                                <span class="exclamation-symbol">
+                                    <span>!</span>
+                                </span>
+                                <p>We need a name to get you started</p>
+                            </div>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" placeholder="Last Name (Optional)">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" placeholder="Custom Status (Optional)">
+                        <span matSuffix class="grey-text">80</span>
+                    </mat-form-field>
+                    <button mat-raised-button class="btn-submit" routerLink="/areas-of-interest">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

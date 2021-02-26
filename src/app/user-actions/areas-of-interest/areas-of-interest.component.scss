@@ -1,0 +1,19 @@
+
+.areas-main {
+    max-height: 350px;
+    mat-selection-list {
+        flex-flow: wrap;
+        mat-list-option {
+            display: contents;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.btn-submit {
+    padding: 6px 50px;
+    margin: 0px auto;
+    display: table;
+    margin-top: 10px;
+}
