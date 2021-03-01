@@ -1,0 +1,62 @@
+@import '../../../../assets/css/variables';
+
+.card-info-header {
+    padding: 14.5px 25px;
+    border-bottom: 1px solid $color-lightgrey16;
+}
+.notifications-text {
+    font-size: $font-15;
+    font-family: 'Metropolis-Medium';
+    line-height: $font-20;
+    .notification-number {
+        color: $color-white;
+        width: 23px;
+        height: 23px;
+        background: $color-red;
+        padding: 6px;
+        border-radius: 50%;
+        line-height: 12px;
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 5px;
+    }
+}
+.mark-all-read-text {
+    color: $color-blue1;
+    font-size: 14px;
+    text-decoration: underline;
+    line-height: 18px;
+    cursor: pointer;
+    .close-icon img {
+        margin-left: 10px;
+    }
+}
+.notification-info-body {
+    .p-small-grey14 {
+        padding: 10px 20px 10px 25px;
+    }
+}
+.notification-msg {
+    padding: 12px 25px;
+    background: $color-blue5;
+    border-bottom: 1px solid $color-lightgrey16;
+    cursor: pointer;
+    img.profile-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        float: left;
+    }
+    p {
+        font-size: $font-14;
+        line-height: $font-18;
+        span.active {
+            color: $color-blue1;
+        }
+    }
+    &.read-msg {
+        background-color: $color-white;
+    }
+}

@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="header-right" fxFlex="30" fxLayoutAlign.sm="end center" fxLayoutAlign.xs="end center" fxLayoutAlign="start center">
-        <div class="ic-invite mr-30">
+        <div class="ic-invite mr-30" (click)="showInviteSidebar()">
             <a routerLink="/search">
                 <img alt="search icon" src="../../../assets/images/icons/ic-plus-grey.png" />
                 <span class="ml-10">Invite</span>
@@ -31,7 +31,7 @@
             </a>
         </div>
         <div class="ic-message mr-40">
-            <a routerLink="/messages">
+            <a (click)="showMsgSidebar()">
                 <img alt="message icon" src="../../../assets/images/icons/ic-message-grey.png" />
                 <div class="notification-number">
                     <span>12</span>
@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="ic-notification mr-40">
-            <a routerLink="/notification">
+            <a (click)="showNotificationSidebar()">
                 <img alt="message icon" src="../../../assets/images/icons/ic-notification-grey.png" />
                 <div class="notification-number">
                     <span>12</span>

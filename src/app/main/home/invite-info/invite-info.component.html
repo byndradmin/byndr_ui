@@ -1,0 +1,55 @@
+<div class="card-info-main">
+    <div class="card-info-header" fxLayout="row wrap" fxLayoutWrap="wrap">
+        <div fxFlex="initial" fxLayoutAlign="start center">
+            <div class="notifications-text">
+                <img alt="invite mail icon" src="../../../../assets/images/icons/ic-invite-main.png" /> Invite People to join Byndr
+            </div>
+        </div>
+        <div fxFlex fxLayoutAlign="end center">
+            <span class="close-icon">
+                <img (click)="closeSidebar()" alt="close icon" src="../../../../assets/images/icons/ic-close-grey.png" />
+            </span>
+        </div>
+    </div>
+    <mat-form-field class="invite-people">
+        <mat-chip-list #chipList aria-label="Invite People">
+            <mat-chip *ngFor="let person of peopleList" [selectable]="selectable" [removable]="removable" (removed)="remove(person)">
+                {{person.email}}
+                <img alt="cancel icon" matChipRemove *ngIf="removable" src="../../../../assets/images/icons/ic-close-blue.png" />
+            </mat-chip>
+            <input placeholder="Enter Email Address Seperated by Commas" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+        <mat-error>
+            <div class="password-error">
+                <span class="exclamation-symbol">
+                    <span>!</span>
+                </span>
+                <p>Invalid Email Address</p>
+                <p>Please make sure you are typing in valid email addresses seperated by commas.</p>
+            </div>
+        </mat-error>
+    </mat-form-field>
+    <div class="form-btns" fxLayout="row wrap" fxLayoutWrap="wrap">
+        <button mat-raised-button class="btn-submit mr-20">Send</button>
+        <button mat-raised-button class="btn-cancel">Cancel</button>
+    </div>
+    <div class="invited-success-popup" fxLayout="row" fxLayoutAlign="start center">
+        <div class="invite-popup-body" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="initial" fxLayoutAlign="start center">
+                <img class="mail-icon" alt="invitation mail icon" src="../../../../assets/images/icons/ic-success-mail-blue.png" />
+            </div>
+            <div fxFlex="initial" fxLayoutAlign="start center">
+                <div fxLayout="column">
+                    <h6 class="h6-15-blue">You've Successfully invited 8 people to join Byndr</h6>
+                    <p class="p-small-grey14">An email has been sent to their addresses to be a part of the learning community.
+                    </p>
+                </div>
+            </div>
+            <div class="close-icon">
+                <img class="close-icon" alt="invitation mail icon" src="../../../../assets/images/icons/ic-close-grey.png" />
+            </div>
+        </div>
+
+    </div>
+</div>

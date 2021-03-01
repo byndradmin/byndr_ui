@@ -1,7 +1,7 @@
 <div class="home-main">
     <div class="home-header" fxLayout="row wrap" fxLayoutWrap="wrap">
         <!-- for new user fxFlex="70" and for old user fxFlex="100" -->
-        <div class="pr-20" fxFlex.xs="100" fxFlex="70" fxFlex.md="60" fxLayoutAlign="start center">
+        <div class="pr-20" fxFlex.xs="100" [fxFlex]="mainService.homeLatest_lg" [fxFlex.md]="mainService.homeLatest_md" fxLayoutAlign="start center">
             <div class="w-100" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
                 <div fxFlex="initial" fxLayoutAlign="start center">
                     <h4 class="h4-20-black">Latest</h4>
@@ -23,17 +23,21 @@
             </div>
         </div>
     </div>
-    <div class="home-body" fxLayout="row wrap" fxLayoutWrap="wrap">
+
+    <div [ngClass]="mainService.isOpened === true ? 'show-sidebar home-body' : 'home-body'" fxLayout="row wrap" fxLayoutWrap="wrap">
+
         <!-- for new user fxFlex="70" and for old user fxFlex="100" -->
-        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex="70" fxFlex.md="60" fxLayoutAlign="start start">
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex="70" fxFlex.md="60" fxLayoutAlign="start start">
             <div class="ptl-20 card-main" fxLayout="row wrap" fxLayoutWrap="wrap">
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-1.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
                         </div>
+
                         <div class="views-row pb-10" fxLayout="row" fxLayoutAlign="start center">
                             <div fxFlex="initial" fxLayoutAlign="start center">
                                 <p class="views-text">550 Views</p>
@@ -59,9 +63,10 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-2.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -91,9 +96,10 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-3.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -123,9 +129,10 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-4.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -154,9 +161,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-1.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -186,9 +194,10 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-2.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -218,9 +227,11 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
+
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-3.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -250,9 +261,10 @@
                     </div>
                 </div>
 
-                <div class="pr-20 pb-20" fxFlex="33.333" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100">
+                <div class="pr-20 pb-20" [fxFlex]="mainService.cardBox_lg" [fxFlex.md]="mainService.cardBox_md" [fxFlex.sm]="mainService.cardBox_sm"
+                    [fxFlex.xs]="mainService.cardBox_xs">
                     <div class="card-box">
-                        <div class="body-card">
+                        <div class="body-card" (click)="showSidebar()">
                             <img alt="card image" class="card-img mb-10" src="../../../assets/images/rawimages/card-4.jpg" />
                             <h5 class="h5-16-black pb-10">Lorem ipsum dolor sit amet</h5>
                             <p class="p-small-black14 pb-20">Lorem Ipsum is simply dummy text of the printing</p>
@@ -285,36 +297,53 @@
         </div>
 
         <!-- Below section visible only for new user -->
-        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex="30" fxFlex.md="40" fxLayoutAlign="start start">
-            <div class="new-user-complete-sections" fxLayout="column">
-                <div class="complete-box">
-                    <h4 class="h4-20-blue pb-10 align-center">Complete your profile</h4>
-                    <p class="p-small-black14 pb-20 align-center">Start setting up your profile by following a few very quick steps so you can learn with ease!
-                    </p>
-                    <div fxLayout="row" fxLayoutAlign="center center">
-                        <button mat-raised-button class="btn-submit mr-20">Go to Profile Settings</button>
-                        <button mat-raised-button class="btn-cancel">Hide</button>
+        <div class="complete-section-main" [fxFlex]="mainService.completeSection_lg" [fxFlex.md]="mainService.completeSection_md"
+            [fxFlex.sm]="mainService.completeSection_sm" [fxFlex.xs]="mainService.completeSection_xs">
+            <div fxFlex="100" fxLayoutAlign="start start">
+                <div class="new-user-complete-sections" fxLayout="column">
+                    <div class="complete-box">
+                        <h4 class="h4-20-blue pb-10 align-center">Complete your profile</h4>
+                        <p class="p-small-black14 pb-20 align-center">Start setting up your profile by following a few very quick steps so you can learn with ease!
+                        </p>
+                        <div fxLayout="row wrap" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+                            <button mat-raised-button class="btn-submit mr-20">Go to Profile Settings</button>
+                            <button mat-raised-button class="btn-cancel">Hide</button>
+                        </div>
+                    </div>
+                    <div class="complete-box">
+                        <h4 class="h4-20-blue pb-10 align-center">Let's start exploring!</h4>
+                        <p class="p-small-black14 pb-20 align-center">Select any one content type to start your learning experience.
+                        </p>
+                        <div fxLayout="row wrap" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+                            <button mat-raised-button class="btn-submit mr-20">Start new Discovery</button>
+                            <button mat-raised-button class="btn-cancel">Hide</button>
+                        </div>
+                    </div>
+                    <div class="complete-box">
+                        <h4 class="h4-20-blue pb-10 align-center">Start following Topics!</h4>
+                        <p class="p-small-black14 pb-20 align-center">Get started by following content sources and stay updated with your favourite topics.
+                        </p>
+                        <div fxLayout="row wrap" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+                            <button mat-raised-button class="btn-submit mr-20">Find Sources</button>
+                            <button mat-raised-button class="btn-cancel">Hide</button>
+                        </div>
                     </div>
                 </div>
-                <div class="complete-box">
-                    <h4 class="h4-20-blue pb-10 align-center">Let's start exploring!</h4>
-                    <p class="p-small-black14 pb-20 align-center">Select any one content type to start your learning experience.
-                    </p>
-                    <div fxLayout="row" fxLayoutAlign="center center">
-                        <button mat-raised-button class="btn-submit mr-20">Start new Discovery</button>
-                        <button mat-raised-button class="btn-cancel">Hide</button>
-                    </div>
-                </div>
-                <div class="complete-box">
-                    <h4 class="h4-20-blue pb-10 align-center">Start following Topics!</h4>
-                    <p class="p-small-black14 pb-20 align-center">Get started by following content sources and stay
-                        updated with your favourite topics.
-                    </p>
-                    <div fxLayout="row" fxLayoutAlign="center center">
-                        <button mat-raised-button class="btn-submit mr-20">Find Sources</button>
-                        <button mat-raised-button class="btn-cancel">Hide</button>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex="30" fxFlex.md="40" fxLayoutAlign="start start" class="sidebar-right-main" [@slideInOut]="mainService.menuState">
+            <div class="sidebar-right-div" *ngIf="mainService.isCardInfo">
+                <app-card-info></app-card-info>
+            </div>
+            <div class="sidebar-right-div" *ngIf="mainService.isNotificationInfo">
+                <app-notification-info></app-notification-info>
+            </div>
+            <div class="sidebar-right-div" *ngIf="mainService.isMessageInfo">
+                <app-messages-info></app-messages-info>
+            </div>
+            <div class="sidebar-right-div" *ngIf="mainService.isInviteInfo">
+                <app-invite-info></app-invite-info>
             </div>
         </div>
     </div>

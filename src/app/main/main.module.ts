@@ -8,23 +8,34 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { CardInfoComponent } from './home/card-info/card-info.component';
+import { MainService } from './main.service';
+import { NotificationInfoComponent } from './home/notification-info/notification-info.component';
+import { MessagesInfoComponent } from './home/messages-info/messages-info.component';
+import { InviteInfoComponent } from './home/invite-info/invite-info.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
     declarations: [
         MainComponent,
         HomeComponent,
         LeftSidebarComponent,
-        HeaderComponent
+        HeaderComponent,
+        CardInfoComponent,
+        NotificationInfoComponent,
+        MessagesInfoComponent,
+        InviteInfoComponent
     ],
     imports: [
         MainRoutingModule,
         FlexLayoutModule,
         MatButtonModule,
         MatSelectModule,
-        CommonModule
+        CommonModule, MatSidenavModule, MatChipsModule
     ],
     providers: [
+        MainService
     ]
 })
 export class MainModule { }

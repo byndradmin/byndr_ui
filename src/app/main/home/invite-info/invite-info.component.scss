@@ -1,0 +1,53 @@
+@import '../../../../assets/css/variables';
+
+.card-info-main {
+    height: calc(100vh - 48px);
+    position: relative;
+    .invited-success-popup {
+        position: absolute;
+        bottom: 50px;
+        padding: 0px 25px;
+        .invite-popup-body {
+            padding: 20px;
+            box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+            img.mail-icon {
+                width: 45px;
+                height: 43px;
+                margin-right: 20px;
+            }
+            h6 {
+                font-family: 'Metropolis-Medium';
+                padding-bottom: 5px;
+            }
+            img.close-icon {
+                width: 17px;
+                height: 17px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.card-info-header {
+    padding: 14.5px 25px;
+}
+.notifications-text {
+    font-size: $font-15;
+    font-family: 'Metropolis-Medium';
+    line-height: $font-20;
+    img {
+        width: 25px;
+        height: 20px;
+        margin-right: 10px;
+        margin-top: -2px;
+    }
+}
+.invite-people {
+    padding: 10px 25px 0px 25px;
+}
+.form-btns {
+    padding-left: 25px;
+    button {
+        padding: 6px 30px;
+        margin-right: 20px;
+    }
+}

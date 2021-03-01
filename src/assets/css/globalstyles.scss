@@ -83,6 +83,12 @@ app-terms-of-service, app-intro, app-areas-of-interest, app-tour-popup { width: 
     font-family: Metropolis-Medium;
     color: $color-blue1;
 }
+.h3-24-black {
+    font-size: $font-24;
+    line-height: $font-30;
+    font-family: Metropolis-Medium;
+    color: $color-black;
+}
 .h4-20-black {
     color: $color-black;
     font-size: $font-20;
@@ -104,6 +110,12 @@ app-terms-of-service, app-intro, app-areas-of-interest, app-tour-popup { width: 
     line-height: $font-22;
     color: $color-black;
 }
+.h6-15-blue {
+    color: $color-blue1;
+    font-family: 'Metropolis-Regular';
+    font-size: $font-15;
+    line-height: $font-22;
+}
 .p-small-white14 {
     color: $color-white;
     font-size: $font-14;
@@ -117,6 +129,14 @@ app-terms-of-service, app-intro, app-areas-of-interest, app-tour-popup { width: 
 .p-small-black14 {
     font-size: $font-14;
     color: $color-black3;
+    line-height: $font-20;
+    b {
+        font-family: 'Metropolis-Medium';
+    }
+}
+.p-small-grey14 {
+    font-size: $font-14;
+    color: $color-lightgrey14;
     line-height: $font-20;
 }
 .align-center {
@@ -299,6 +319,52 @@ mat-form-field .mat-form-field {
     line-height: 35px !important;
     height: 35px !important;
     font-size: 15px !important;
+}
+.invite-people {
+    .mat-form-field-flex {
+        border: 1px solid $color-lightgrey16;
+        border-radius: 5px;
+        padding: 12px 15px;
+        min-height: 100px;
+        .mat-form-field-infix {
+            padding: 0px;
+            border: 0px;
+            font-size: $font-14;
+            line-height: $font-22;
+            position: relative;
+            top: -6px;
+        }
+    }
+    .mat-chip-list-wrapper {
+        padding-top: 25px;
+    }
+    .mat-form-field-label {
+        padding-top: 15px;
+    }
+    &.mat-form-field-appearance-legacy {
+        .mat-form-field-underline, .mat-form-field-ripple {
+            height: 0px;
+        }
+    } 
+    .mat-chip {
+        line-height: $font-18;
+        font-size: $font-14;
+        padding: 8px 15px;
+        height: auto;
+    }
+    .mat-chip.mat-standard-chip {
+        background-color: $color-blue6;
+        color: $color-blue2;
+    }
+    .mat-standard-chip:hover::after, .mat-standard-chip:focus::after {
+        opacity: 0;
+    }
+    .mat-chip.mat-standard-chip .mat-chip-remove {
+        opacity: 1;
+    }
+    .mat-standard-chip .mat-chip-remove, .mat-standard-chip .mat-chip-trailing-icon {
+        margin-left: 12px;
+    }
 }
 
 // country flag country code scss

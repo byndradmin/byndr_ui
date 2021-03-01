@@ -1,0 +1,48 @@
+<div class="card-info-main">
+    <div class="card-info-header" fxLayout="row wrap" fxLayoutWrap="wrap">
+        <div fxFlex="initial" fxLayoutAlign="start center">
+            <div class="notifications-text">
+                Notifications
+                <span class="notification-number">1</span>
+            </div>
+        </div>
+        <div fxFlex fxLayoutAlign="end center">
+            <div class="mark-all-read-text">
+                Mark All as read
+                <span class="close-icon">
+                    <img (click)="closeSidebar()" alt="close icon" src="../../../../assets/images/icons/ic-close-grey.png" />
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="notification-info-body">
+        <p class="p-small-grey14 pb-10">Just Now</p>
+        <ul>
+            <li>
+                <div class="notification-msg" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="85" fxLayoutAlign="start center">
+                        <img class="profile-img" alt="profile icon" src="../../../../assets/images/rawimages/card-profile" />
+                        <p>Let's
+                            <span class="active">Take the tour</span> with
+                            <span class="active"> Byndr</span>
+                        </p>
+                    </div>
+                    <div fxFlex fxLayoutAlign="end center">
+                        <img alt="dots" src="../../../../assets/images/icons/ic-dots-grey.png" />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="notification-msg read-msg" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="85" fxLayoutAlign="start center">
+                        <img class="profile-img" alt="profile icon" src="../../../../assets/images/rawimages/card-profile" />
+                        <p>Lorem Ipsum is simply dummy text of the printing</p>
+                    </div>
+                    <div fxFlex fxLayoutAlign="end center">
+                        <img alt="dots" src="../../../../assets/images/icons/ic-dots-grey.png" />
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,7 +1,6 @@
 @import '../../../assets/css/variables';
 
 .header-main {
-    margin-left: 2px;
     background-color: $color-lightgrey15;
     border-bottom: 1px solid $color-lightgrey16;
     .header-right {
@@ -46,6 +45,7 @@
         }
     }
     .ic-invite {
+        cursor: pointer;
         a {
             img {
                 width: 16px; 
@@ -67,12 +67,14 @@
     }
     .ic-message {
         position: relative;
+        cursor: pointer;
         img {
             width: 25px;
             height: 23px;
         }
     } 
     .ic-notification {
+        cursor: pointer;
         position: relative;
         img {
             width: 21px;

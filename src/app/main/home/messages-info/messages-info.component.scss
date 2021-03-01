@@ -1,0 +1,79 @@
+@import '../../../../assets/css/variables';
+
+.card-info-header {
+    padding: 14.5px 25px;
+    border-bottom: 1px solid $color-lightgrey16;
+}
+.notifications-text {
+    font-size: $font-15;
+    font-family: 'Metropolis-Medium';
+    line-height: $font-20;
+    .notification-number {
+        color: $color-white;
+        width: 23px;
+        height: 23px;
+        background: $color-red;
+        padding: 6px;
+        border-radius: 50%;
+        line-height: 12px;
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 5px;
+    }
+}
+.mark-all-read-text {
+    color: $color-blue1;
+    font-size: 14px;
+    text-decoration: underline;
+    line-height: 18px;
+    cursor: pointer;
+    .close-icon img {
+        margin-left: 10px;
+    }
+}
+.notification-msg {
+    padding: 12px 25px;
+    background: $color-blue5;
+    border-bottom: 1px solid $color-lightgrey16;
+    cursor: pointer;
+    img.profile-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        float: left;
+    }
+    .msg-number {
+        color: $color-white;
+        width: 23px;
+        height: 23px;
+        background: $color-red;
+        padding: 6px;
+        border-radius: 50%;
+        line-height: 12px;
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+    }
+    &.read-msg {
+        background-color: $color-white;
+    }
+}
+.profile-img-main {
+    position: relative;
+    .online-symbol {
+        position: absolute;
+        bottom: 3px;
+        right: 6px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $color-green2;
+    }
+}
+.msg-info {
+    .h6-15-blue {
+        padding-bottom: 3px;
+    }
+}

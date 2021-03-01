@@ -1,5 +1,8 @@
 @import '../../../assets/css/variables';
 
+.home-main {
+    position: relative;
+}
 .home-body {
     background-color: $color-lightgrey15;
 }
@@ -66,15 +69,29 @@
         .btn-submit {
             padding: 4px 20px;
             margin-right: 20px;
+            font-size: $font-15;
         }
         .btn-cancel {
             padding: 4px 20px;
+            font-size: $font-15;
         }
+    }
+}
+.sidebar-right-main {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: $color-white;
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 10%);
+    .sidebar-right-div {
+        width: 100vw;
     }
 }
 
 // media queries
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 599px) {
     .home-header .w-100 {
         align-items: flex-start !important;
         .sort-by {
@@ -84,9 +101,51 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 960px) {
     .home-body {
         height: calc(100vh - 102px);
         overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+    .show-sidebar {
+        .complete-section-main {
+            max-width: 60% !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .show-sidebar {
+        .complete-section-main {
+            max-width: 70% !important;
+            .new-user-complete-sections {
+                flex-direction: row !important;
+                flex-flow: row wrap;
+                .complete-box {
+                    width: calc(50% - 20px);
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    .show-sidebar {
+        .complete-section-main {
+            max-width: 50.1% !important;
+        }
+    }
+    .complete-section-main {
+        max-width: 50% !important;
+    }
+    .new-user-complete-sections {
+        .complete-box {
+            padding: 15px 20px;
+            .btn-submit { 
+                margin-bottom: 10px;
+            }
+        }
     }
 }
