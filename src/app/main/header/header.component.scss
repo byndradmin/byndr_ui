@@ -1,0 +1,110 @@
+@import '../../../assets/css/variables';
+
+.header-main {
+    margin-left: 2px;
+    background-color: $color-lightgrey15;
+    border-bottom: 1px solid $color-lightgrey16;
+    .header-right {
+        border-left: 1px solid $color-lightgrey16;
+        padding-left: 20px;
+        max-width: 300px !important;
+    }
+    .header-left {
+        max-width: calc(100% - 300px) !important;
+    }
+    ul.menu-items {
+        li {
+            list-style-type: none;
+            a {
+                color: $color-blue2;
+                font-size: $font-18;
+                line-height: $font-28;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &.active {
+                background-color: $color-white;
+                padding: 10px 20px;
+            }
+        }
+    }
+    .search-icon {
+        a {
+            img {
+                width: 18px;
+                height: 17px;
+            }
+            span {
+                color: $color-lightgrey14;
+                font-size: $font-16;
+                line-height: $font-22;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .ic-invite {
+        a {
+            img {
+                width: 16px; 
+                height: 16px;
+            }
+            span {
+                color: $color-lightgrey14;
+                font-size: $font-16;
+                line-height: $font-22; 
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .ic-info img {
+        width: 24px;
+        height: 24px;
+    }
+    .ic-message {
+        position: relative;
+        img {
+            width: 25px;
+            height: 23px;
+        }
+    } 
+    .ic-notification {
+        position: relative;
+        img {
+            width: 21px;
+            height: 23px;
+        }
+        .notification-number { 
+            left: 18px;
+        }
+    }
+    .notification-number {
+        position: absolute;
+        top: -3px;
+        left: 20px;
+        span {
+            background: $color-red;
+            border-radius: 50%;
+            padding: 3.5px;
+            font-size: 10px;
+            color: $color-white;
+        }
+    }
+}
+
+// media queries
+@media screen and (max-width: 767px) {
+    .header-main {
+        .header-left, .header-right {
+            max-width: 100% !important;
+        }
+        .header-right {
+            padding-bottom: 20px;
+        }
+    }
+
+}

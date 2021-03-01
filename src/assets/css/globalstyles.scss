@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 
 // all components width to 100%
 app-signup, app-login, app-forgot-password, app-confirmation-link, app-reset-password, app-password-confirmation-link,
-app-terms-of-service, app-intro, app-areas-of-interest { width: 100%; }
+app-terms-of-service, app-intro, app-areas-of-interest, app-tour-popup { width: 100%; }
 
 // custom scrollbar
 .scroll-bar {
@@ -48,6 +48,7 @@ app-terms-of-service, app-intro, app-areas-of-interest { width: 100%; }
 // global paddings
 .pt-10 { padding-top: 10px; }
 .pt-20 { padding-top: 20px; }
+.ptl-20 { padding: 20px 0px 0px 20px; }
 .pr-20 { padding-right: 20px; }
 .pb-20 { padding-bottom: 20px; }
 .prb-20 { padding: 0px 20px 20px 0px; }
@@ -58,6 +59,10 @@ app-terms-of-service, app-intro, app-areas-of-interest { width: 100%; }
 .mr-10 { margin-right: 10px; }
 .ml-10 { margin-left: 10px; }
 .pb-10 { padding-bottom: 10px; }
+.mb-10 { margin-bottom: 10px; }
+.mr-30 { margin-right: 30px; }
+.mr-40 { margin-right: 40px; }
+.pb-15 { padding-bottom: 15px;}
 
 // font sizes for header tags
 .h1-36 {
@@ -77,6 +82,45 @@ app-terms-of-service, app-intro, app-areas-of-interest { width: 100%; }
     line-height: $font-30;
     font-family: Metropolis-Medium;
     color: $color-blue1;
+}
+.h4-20-black {
+    color: $color-black;
+    font-size: $font-20;
+    line-height: $font-26;
+}
+.h4-20-blue {
+    color: $color-blue1;
+    font-size: $font-20;
+    line-height: $font-26;
+}
+.h5-white-18 {
+    color: $color-white;
+    font-family: 'Metropolis-Medium';
+    font-size: $font-18;
+}
+.h5-16-black {
+    font-size: $font-16;
+    font-family: 'Metropolis-Medium';
+    line-height: $font-22;
+    color: $color-black;
+}
+.p-small-white14 {
+    color: $color-white;
+    font-size: $font-14;
+    line-height: $font-20;
+}
+.p-small-black15 {
+    color: $color-black;
+    font-size: $font-15;
+    line-height: $font-20;
+}
+.p-small-black14 {
+    font-size: $font-14;
+    color: $color-black3;
+    line-height: $font-20;
+}
+.align-center {
+    text-align: center;
 }
 
 // global styles
@@ -223,6 +267,38 @@ mat-form-field .mat-form-field {
 }
 .mat-form-field-wrapper {
     padding-bottom: 15px;
+}
+.select-box {
+    &.mat-form-field-appearance-fill .mat-form-field-flex {
+        padding: 0em 20px 0 20px;
+        border-radius: 3px;
+        margin-right: 8px;
+        width: 100%;
+        max-width: 160px;
+        .mat-form-field-infix {
+            border-top: 0px solid transparent;
+            padding: 6px 0px 6px 0px !important;
+        }
+    }
+    .mat-form-field-underline::before, .mat-form-field-ripple {
+        height: 0px !important;
+    }
+    .mat-select-arrow-wrapper {
+        position: relative;
+        top: 8px;
+    }
+    .mat-form-field-wrapper {
+        padding-bottom: 0px;
+    }
+    .mat-select-value-text {
+        font-size: $font-15;
+        line-height: $font-18;
+    }
+}
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+    line-height: 35px !important;
+    height: 35px !important;
+    font-size: 15px !important;
 }
 
 // country flag country code scss

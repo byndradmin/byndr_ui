@@ -1,0 +1,92 @@
+@import '../../../assets/css/variables';
+
+.home-body {
+    background-color: $color-lightgrey15;
+}
+.sort-by {
+    margin-top: -9px;
+    .sort-by-text {
+        width: 60px;
+    }
+}
+.home-header {
+    padding: 15px 0px 0px 20px;
+    border-bottom: 1px solid $color-lightgrey16;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+    h4 {
+        padding-bottom: 12px;
+    }
+}
+.card-box {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid $color-lightgrey17;
+    background-color: $color-white;
+    img.card-img {
+        width: 100%;
+        height: 140px;
+    }
+    .views-text, .time-text, .source-url {
+        font-size: $font-12;
+        color: $color-lightgrey14;
+        line-height: $font-14;
+    }
+    .source-row {
+        img.card-profile {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .source-head {
+            font-size: $font-14;
+            line-height: $font-18;
+            color: $color-blue2;
+        }
+        .source-link:hover {
+            text-decoration: none;
+        }
+    }
+    .body-card {
+        cursor: pointer;
+    }
+}
+.new-user-complete-sections {
+    padding: 20px;
+    border-left: 1px solid $color-lightgrey16;
+    width: 100%;
+    clear: both;
+    height: 100%;
+    .complete-box {
+        padding: 25px 40px;
+        background: $color-white;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        border: 1px solid $color-lightgrey16;
+        .btn-submit {
+            padding: 4px 20px;
+            margin-right: 20px;
+        }
+        .btn-cancel {
+            padding: 4px 20px;
+        }
+    }
+}
+
+// media queries
+@media screen and (max-width: 767px) {
+    .home-header .w-100 {
+        align-items: flex-start !important;
+        .sort-by {
+            margin-top: 0px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home-body {
+        height: calc(100vh - 102px);
+        overflow-y: auto;
+    }
+}

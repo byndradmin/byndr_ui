@@ -1,0 +1,212 @@
+@import '/src/assets/css/variables';
+
+.tour-spread-main {
+    background: url('../../../assets/images/rawimages/SSO-BG.png')no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    .left-bottom-icon {
+        position: absolute;
+        bottom: 40px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .home-icon {
+        position: relative;
+        img.ic-home {
+            width: 30px;
+            height: 30px;
+        }
+        .home-spread {
+            position: absolute;
+            left: 50px;
+            top: 0px;
+            width: 300px;
+        }
+        .left-icons {
+            position: absolute;
+            top: 120px;
+            img {
+                width: 25px;
+                height: 25px;
+                margin-bottom: 20px;
+                &.ic-learning-module-3 {
+                    width: 22px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+    .search-icon {
+        img {
+            width: 22px;
+            height: 22px;
+        }
+        span {
+            color: $color-white;
+            font-size: $font-16;
+            line-height: $font-22;
+            font-family: 'Metropolis-Regular';
+        }
+    }
+    .invite-icon {
+        img {
+            width: 18px;
+            height: 18px;
+        }
+        span {
+            color: $color-white;
+            font-size: $font-16;
+            line-height: $font-22;
+            font-family: 'Metropolis-Regular';
+        }
+    }
+    .i-symbol-icon {
+        position: relative;
+        img {
+            width: 30px;
+            height: 73px;
+            z-index: 9999;
+            position: relative;
+        }
+        .i-symbol-spread {
+            position: absolute;
+            width: 300px;
+            right: -120px;
+            top: 60px;
+            z-index: 0;
+        }
+    }
+    .video-icon {
+        img {
+            width: 30px;
+            height: 26px;
+        }
+    }
+    .notification-icon {
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .popup-info-text {
+        font-size: $font-18;
+        text-align: center;
+        line-height: $font-24;
+        color: $color-black2;
+    }
+     .spread-popup {
+        padding: 20px 25px;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        &.spread-popup-icon {
+            padding: 30px 20px 20px 20px;
+            margin-bottom: 40px;
+            img {
+                position: absolute;
+                top: -12px;
+                left: 46%;
+                width: 30px;
+                height: 30px;
+            }
+            .learning-modules-icons {
+                position: absolute;
+                top: -12px;
+                left: 30%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    position: static;
+                }
+            }
+        }
+    }
+    .spread-dashboard {
+        background: $color-white;
+        width: 100%;
+        padding: 50px 60px;
+        border-radius: 10px;
+    }
+    .finish-btn button {
+        padding: 6px 50px;
+        margin: 0px auto;
+        display: table;
+        margin-top: 30px;
+    }
+    .tour-spread-middle {
+        padding-top: 30px;
+    }
+    .tour-spread-tab {
+        margin: 0px auto;
+    }
+}
+
+// media queries
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .tour-spread-main {
+        height: 100%;
+        width: 100%;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .spread-popup {
+        width: 372px;
+    }
+    .tour-spread-main {
+        height: 100%;
+    }
+    .tour-spread-header-right {
+        padding: 100px 0px 20px 70px !important;
+    }
+    .tour-spread-middle {
+        padding: 120px 0px 20px 0px !important;;
+    }
+    .tour-spread-tab {
+        max-width: 100%;
+        flex-direction: column !important;
+        width: 100%;
+        margin: 0px auto;
+        display: table !important;
+    }
+    .learning-modules-tab {
+        max-width: 100%;
+        margin: 0px auto;
+        display: table;
+        .learning-modules-col {
+            margin: 0px auto;
+            display: table;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .messages-tab {
+        padding-top: 50px;
+    }
+    .messages-spread {
+        margin-bottom: 60px !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .spread-dashboard-tab {
+        width: 60%;
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .spread-dashboard-tab {
+        width: 90%;
+        margin: 0px auto;
+    }
+}
