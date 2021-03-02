@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -34,6 +35,8 @@ export class SignupComponent implements OnInit {
   //matcher = new MyErrorStateMatcher();
 
   constructor(
+    private _fb: FormBuilder,
+    private _router: Router
     private _fb: FormBuilder
   ) { }
 
@@ -66,9 +69,12 @@ export class SignupComponent implements OnInit {
   checkConfirmPasswords(group: any) { // here we have the 'passwords' group
     const password = group.get('password').value;
     const confirmPassword = group.get('confirmPassword').value;
+    if (password !== confirmPassword) {
+      group.get('confirmPassword').setErrors({ notSame: true });
+    }
+  }
     return password === confirmPassword ? null : { notSame: true }
   }
-
   checkInUseEmail(control: { value: string; }) {
     // mimic http database access
     let db = ['tony@gmail.com'];
@@ -102,6 +108,10 @@ export class SignupComponent implements OnInit {
 
   onSubmit(post: any) {
     this.post = post;
+    console.log(this.formGroup)
+    if (this.formGroup.valid) {
+      this._router.navigate(['./confirmation-link'])
+    }
   }
 
 }
