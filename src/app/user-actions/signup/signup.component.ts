@@ -37,6 +37,7 @@ export class SignupComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router
+    private _fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
@@ -72,8 +73,8 @@ export class SignupComponent implements OnInit {
       group.get('confirmPassword').setErrors({ notSame: true });
     }
   }
-
-
+    return password === confirmPassword ? null : { notSame: true }
+  }
   checkInUseEmail(control: { value: string; }) {
     // mimic http database access
     let db = ['tony@gmail.com'];
