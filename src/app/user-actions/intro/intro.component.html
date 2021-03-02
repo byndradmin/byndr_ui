@@ -3,17 +3,17 @@
         <div class="box-main box-padding-large w-100" fxLayout="column">
             <h3 class="h3-24 pb-10" fxLayoutAlign="center center">Hey there!</h3>
             <h5 class="h5-18 pb-10" fxLayoutAlign="center center">What should we call you?</h5>
-            <form>
+            <form [formGroup]="formGroup">
                 <div class="form-fields-main mt-20">
                     <mat-form-field appearance="outline">
-                        <input matInput placeholder="First Name">
+                        <input matInput placeholder="First Name" autocomplete="off" formControlName="name">
                         <span matSuffix class="required-text">* Required</span>
-                        <mat-error>
+                        <mat-error *ngIf="!formGroup.controls['name'].valid && formGroup.controls['name'].touched">
                             <div class="password-error">
                                 <span class="exclamation-symbol">
                                     <span>!</span>
                                 </span>
-                                <p>We need a name to get you started</p>
+                                <p>{{ getErrorName()}}</p>
                             </div>
                         </mat-error>
                     </mat-form-field>
