@@ -2,32 +2,36 @@
     <div fxFlex="33.3333" fxFlex.xs="90" fxFlex.sm="70" fxFlex.md="50" fxLayoutAlign="center center">
         <div class="box-main box-padding-large w-100" fxLayout="column">
             <h1 class="h1-36" fxLayoutAlign="center center">Login</h1>
-            <form>
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
                 <div class="form-fields-main pt-20">
                     <mat-form-field appearance="outline">
-                        <input matInput placeholder="Email Address or Phone">
-                        <mat-error>
-                            <div class="password-error">
-                                <span class="exclamation-symbol">
-                                    <span>!</span>
-                                </span>
-                                <p>Account with this email does not exist!</p>
-                                <p>Please check your username, phone number or email address just in case.</p>
-                            </div>
+                        <input matInput placeholder="Email Address or Phone" formControlName="email">
+                        <span matSuffix class="required-text">* Required</span>
+                        <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+                            <span class="exclamation-symbol">
+                                <span>!</span>
+                            </span> {{ getErrorEmail() }}
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field class="password-field" appearance="outline">
-                        <input matInput type="password" placeholder="Password">
+                        <input matInput [type]="!showPassword ? 'password' : 'text'" placeholder="Password"
+                            formControlName="password">
                         <span matSuffix class="password-icon">
-                            <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"/>
+                            <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                *ngIf="!showPassword" (click)="showPassword = !showPassword" />
+                            <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                *ngIf="showPassword" (click)="showPassword = !showPassword" />
                         </span>
-                        <mat-error>
+                        <mat-error
+                            *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched">
                             <div class="password-error">
                                 <span class="exclamation-symbol">
                                     <span>!</span>
                                 </span>
-                                <p>Incorrect Password</p>
-                                <p>Check for caps lock. you never know!</p>
+                                <p>{{ getErrorPassword() }}</p>
+                                <!-- <p>Not Strong enough</p>
+                                    <p>Use both lower and upper case characters, 1 number, 1 special character and atleast 8 characters
+                                        in your password.</p> -->
                             </div>
                         </mat-error>
                     </mat-form-field>
@@ -37,7 +41,8 @@
                                 <mat-checkbox>Remember Me</mat-checkbox>
                             </section>
                         </div>
-                        <div class="forgot-password-text" fxFlex fxLayoutAlign="end center" fxLayoutAlign.xs="start start">
+                        <div class="forgot-password-text" fxFlex fxLayoutAlign="end center"
+                            fxLayoutAlign.xs="start start">
                             <a routerLink="/forgot-password">Forgot Password?</a>
                         </div>
                     </div>
