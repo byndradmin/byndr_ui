@@ -1,97 +1,116 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-    <div fxFlex="33.3333" fxFlex.xs="90" fxFlex.sm="70" fxFlex.md="50" fxLayoutAlign="center center">
-        <div class="box-main box-padding-large w-100" fxLayout="column">
-            <h1 class="h1-36" fxLayoutAlign="center center">Sign Up</h1>
-            <form>
-                <div class="form-fields-main pt-20">
-                    <mat-form-field appearance="outline">
-                        <input matInput placeholder="Email Address" autocomplete="off" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-                        <span matSuffix class="required-text">* Required</span>
-                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                            <span class="exclamation-symbol">
-                                <span>!</span>
-                            </span>Invalid Email Address. e.g. john@example.com
-                        </mat-error>
-                        <mat-error *ngIf="emailFormControl.hasError('required')">
-                            <span class="exclamation-symbol">
-                                <span>!</span>
-                            </span>Email Address is required
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field class="password-field" appearance="outline">
-                        <input matInput placeholder="Unique username" autocomplete="off">
-                        <span matSuffix class="required-text">* Required</span>
-                        <span style="display:none" matSuffix class="icon-closed">
-                            <img alt="closed-icon" src="../../../assets/images/icons/icon-closed.svg"/>
-                        </span>
-                        <span style="display:none" matSuffix class="icon-closed">
-                            <img alt="closed-icon" src="../../../assets/images/icons/right-click-icon.svg"/>
-                        </span>
-                        <mat-error>
-                            <div class="password-error">
+        <div fxFlex="33.3333" fxFlex.xs="90" fxFlex.sm="70" fxFlex.md="50" fxLayoutAlign="center center">
+            <div class="box-main box-padding-large w-100" fxLayout="column">
+                <h1 class="h1-36" fxLayoutAlign="center center">Sign Up</h1>
+                <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+                    <div class="form-fields-main pt-20">
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="Email Address" autocomplete="off" formControlName="email">
+                            <span matSuffix class="required-text">* Required</span>
+                            <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
                                 <span class="exclamation-symbol">
                                     <span>!</span>
-                                </span>
-                                <p>This username is already taken</p>
-                            </div>
-                        </mat-error>
-                        <mat-error>
-                            <div class="password-error">
+                                </span> {{ getErrorEmail() }}
+                            </mat-error>
+                            <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                                 <span class="exclamation-symbol">
                                     <span>!</span>
-                                </span>
-                                <p>Incorrect username (e.g. jamesbond007)</p>
-                                <p>Minimum 6 characters using letters and numbers. Avoid using spaces or special characters.</p>
-                            </div>
-                        </mat-error>
-                    </mat-form-field>
-                    <!-- <ngx-intl-tel-input [cssClass]="'custom'" autocomplete="off" [enableAutoCountrySelect]="false" [enablePlaceholder]="true"
-                        [searchCountryFlag]="true" [selectFirstCountry]="true" [phoneValidation]="true" name="phone" placeholder="Mobile Number (Optional)"></ngx-intl-tel-input> -->
-                    <mat-form-field class="password-field" appearance="outline">
-                        <input matInput type="password" placeholder="Create Password">
-                        <span matSuffix class="password-icon">
-                            <img alt="password icon" src="../../../assets/images/icons/ic-password.svg" />
-                        </span>
-                        <mat-error>
-                            <div class="password-error">
+                                </span>Invalid Email Address. e.g. john@example.com
+                            </mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
                                 <span class="exclamation-symbol">
                                     <span>!</span>
-                                </span>
-                                <p>Not Strong enough</p>
-                                <p>Use both lower and upper case characters, 1 number, 1 special character and atleast 8 characters
-                                    in your password.</p>
-                            </div>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field class="password-field" appearance="outline">
-                        <input matInput type="password" placeholder="Confirm Password">
-                        <span matSuffix class="password-icon">
-                            <img alt="password icon" src="../../../assets/images/icons/ic-password.svg" />
-                        </span>
-                        <mat-error>
-                            <div class="password-error">
-                                <span class="exclamation-symbol">
-                                    <span>!</span>
-                                </span>
-                                <p>Passwords do not match!</p>
-                                <p>Use atleast 1 alphabet, 1 number, 1 capitalised alphabet and 1 special character in your
-                                    password.
-                                </p>
-                            </div>
-                        </mat-error>
-                    </mat-form-field>
-                    <section fxLayout="row wrap" fxLayoutWrap="wrap" class="accept-checkbox">
-                        <mat-checkbox>I accept all the
-                            <a href="#">Terms & Conditions</a> and
-                            <a href="#">Privacy Policy</a>
-                        </mat-checkbox>
-                    </section>
-                    <button mat-raised-button class="btn-submit" routerLink="/confirmation-link">Submit</button>
-                    <div class="login-instead mt-30" fxLayoutAlign="center">
-                        <a routerLink="/login">Login Instead</a>
+                                </span>Email Address is required
+                            </mat-error> -->
+                        </mat-form-field>
+                        <mat-form-field class="password-field" appearance="outline">
+                            <input matInput placeholder="Unique username" autocomplete="off" formControlName="name">
+                            <span matSuffix class="required-text">* Required</span>
+                            <span style="display:none" matSuffix class="icon-closed">
+                                <img alt="closed-icon" src="../../../assets/images/icons/icon-closed.svg" />
+                            </span>
+                            <span style="display:none" matSuffix class="icon-closed">
+                                <img alt="closed-icon" src="../../../assets/images/icons/right-click-icon.svg" />
+                            </span>
+                            <mat-error *ngIf="!formGroup.controls['name'].valid && formGroup.controls['name'].touched">
+                                <div class="password-error">
+                                    <span class="exclamation-symbol">
+                                        <span>!</span>
+                                    </span>
+                                    <p>{{ getErrorName()}}</p>
+                                </div>
+                            </mat-error>
+                            <!-- <mat-error>
+                                <div class="password-error">
+                                    <span class="exclamation-symbol">
+                                        <span>!</span>
+                                    </span>
+                                    <p>Incorrect username (e.g. jamesbond007)</p>
+                                    <p>Minimum 6 characters using letters and numbers. Avoid using spaces or special characters.</p>
+                                </div>
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <ngx-intl-tel-input [cssClass]="'custom'" autocomplete="off" [enableAutoCountrySelect]="false" [enablePlaceholder]="true"
+                            [searchCountryFlag]="true" [selectFirstCountry]="true" [phoneValidation]="true" name="phone" placeholder="Mobile Number (Optional)"></ngx-intl-tel-input> -->
+                        <mat-form-field class="password-field" appearance="outline">
+                            <input matInput [type]="!showPassword ? 'password' : 'text'" placeholder="Create Password"
+                                formControlName="password">
+                            <span matSuffix class="password-icon">
+                                <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                    *ngIf="!showPassword" (click)="showPassword = !showPassword" />
+                                <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                    *ngIf="showPassword" (click)="showPassword = !showPassword" />
+                            </span>
+                            <mat-error
+                                *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched">
+                                <div class="password-error">
+                                    <span class="exclamation-symbol">
+                                        <span>!</span>
+                                    </span>
+                                    <p>{{ getErrorPassword() }}</p>
+                                    <!-- <p>Not Strong enough</p>
+                                    <p>Use both lower and upper case characters, 1 number, 1 special character and atleast 8 characters
+                                        in your password.</p> -->
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="password-field" appearance="outline">
+                            <input matInput [type]="!showConfirmPassword ? 'password' : 'text'"
+                                placeholder="Confirm Password" formControlName="confirmPassword">
+                            <span matSuffix class="password-icon">
+                                <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                    *ngIf="!showConfirmPassword" (click)="showConfirmPassword = !showConfirmPassword" />
+                                <img alt="password icon" src="../../../assets/images/icons/ic-password.svg"
+                                    *ngIf="showConfirmPassword" (click)="showConfirmPassword = !showConfirmPassword" />
+                            </span>
+                            <mat-error
+                                *ngIf="!formGroup.controls['confirmPassword'].valid && formGroup.controls['confirmPassword'].touched">
+                                <div class="password-error">
+                                    <span class="exclamation-symbol">
+                                        <span>!</span>
+                                    </span>
+                                    <p>{{ getErrorConfirmPassword() }}</p>
+                                    <!-- <p>Passwords do not match!</p>
+                                    <p>Use atleast 1 alphabet, 1 number, 1 capitalised alphabet and 1 special character in
+                                        your
+                                        password.
+                                    </p> -->
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <section fxLayout="row wrap" fxLayoutWrap="wrap" class="accept-checkbox">
+                            <mat-checkbox>I accept all the
+                                <a href="#">Terms & Conditions</a> and
+                                <a href="#">Privacy Policy</a>
+                            </mat-checkbox>
+                        </section>
+                        <button mat-raised-button class="btn-submit" routerLink="/confirmation-link"
+                            [disabled]="!formGroup.valid">Submit</button>
+                        <div class="login-instead mt-30" fxLayoutAlign="center">
+                            <a routerLink="/login">Login Instead</a>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
