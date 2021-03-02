@@ -104,8 +104,9 @@
                             <a href="#">Privacy Policy</a>
                         </mat-checkbox>
                     </section>
-                    <button mat-raised-button class="btn-submit" routerLink="/confirmation-link"
-                        [disabled]="!formGroup.valid">Submit</button>
+                    <!-- routerLink="/confirmation-link" -->
+                    <button mat-raised-button type="submit" class="btn-submit" 
+                        >Submit</button>
                     <div class="login-instead mt-30" fxLayoutAlign="center">
                         <a routerLink="/login">Login Instead</a>
                     </div>
